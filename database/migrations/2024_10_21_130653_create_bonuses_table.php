@@ -10,6 +10,9 @@ return new class extends Migration
     {
         Schema::create('bonuses', function (Blueprint $table) {
             $table->id();
+            $table->string('title')->unique();
+            $table->string('description');
+            $table->decimal('price', 12,2);
             $table->timestamps();
         });
     }

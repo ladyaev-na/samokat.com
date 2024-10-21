@@ -15,7 +15,9 @@ return new class extends Migration
             $table->string('patronymic')->nullable();
             $table->string('login')->unique();
             $table->string('password');
+
             $table->string('token')->nullable()->unique();
+
             $table->foreignId('role_id')->constrained();   //роли
             $table->foreignId('penalty_id')->constrained();  //штрафы
             $table->foreignId('status_id')->constrained();  //статусы
