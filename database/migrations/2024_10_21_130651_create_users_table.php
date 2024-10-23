@@ -22,7 +22,6 @@ return new class extends Migration
             $table->foreignId('penalty_id')->constrained();  //штрафы
             $table->foreignId('status_id')->constrained();  //статусы
             $table->foreignId('shift_id')->constrained();  //смены
-            $table->foreignId('contiguous_id')->constrained();  //смежная таблица
             $table->timestamps();
         });
     }
